@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gravionix — High-Velocity Growth & Performance Marketing Agency</title>
+  <meta name="description" content="Gravionix is the specialist growth agency engineering high-velocity customer acquisition, revenue architecture, and hyper-converting creative systems.">
+
+  <!-- Google Fonts: Sora & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- TOP NOTICE & THEME SWITCHER BAR -->
+  <div class="top-notice">
+    <div class="notice-left">
+      <span class="badge-mini">Q4 Client Intake Open</span>
+      <span>Accepting only <strong>3 new scale-up partners</strong> for the upcoming growth cycle.</span>
+    </div>
+    <div class="theme-switcher">
+      <span>Theme:</span>
+      <button class="theme-pill p-violet active" onclick="setTheme('default')" title="Cosmic Electric Violet"></button>
+      <button class="theme-pill p-cyan" onclick="setTheme('cyan')" title="Hyper Cyan & Emerald"></button>
+      <button class="theme-pill p-sunset" onclick="setTheme('sunset')" title="Sunset Ember & Magenta"></button>
+    </div>
+  </div>
+
+  <!-- FIXED HEADER / NAVIGATION -->
+  <header id="hdr">
+    <nav class="nav">
+      <a href="#top" class="logo">
+        Gravi<span class="x">onix</span>
+        <span class="logo-dot"></span>
+      </a>
+      <div class="navlinks">
+        <a href="#who">Who We Help</a>
+        <a href="#system">The System</a>
+        <a href="#engine">The Dual Engine</a>
+        <a href="#proof">Case Results</a>
+        <a href="#calculator">ROI Simulator</a>
+        <button onclick="openBookingModal()" class="btn btn-primary nav-cta">Book a Strategy Call</button>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#who" onclick="toggleMobileMenu()">Who We Help</a>
+    <a href="#system" onclick="toggleMobileMenu()">The System</a>
+    <a href="#engine" onclick="toggleMobileMenu()">The Dual Engine</a>
+    <a href="#proof" onclick="toggleMobileMenu()">Case Results</a>
+    <a href="#calculator" onclick="toggleMobileMenu()">ROI Simulator</a>
+    <a href="#contact" onclick="toggleMobileMenu()">Contact Us</a>
+    <button onclick="toggleMobileMenu(); openBookingModal();" class="btn btn-primary" style="margin-top: 10px;">Book a Strategy Call →</button>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-halo"></div>
+    <div class="wrap">
+      <div class="hero-content-wrapper">
+        <div class="hero-text-content">
+          <p class="hero-eyebrow">
+            <span class="cue-dot">●</span> The Specialist Growth Partner for Modern Brands
+          </p>
+          <h1 class="hero-headline">
+            We turn ambitious brands into category leaders that <span class="gradient-text">scale, dominate &amp; convert</span>.
+          </h1>
+          <p class="hero-sub">
+            Gravionix is the premier growth marketing agency engineering high-velocity customer acquisition, revenue architecture, and hyper-converting creative systems—done-for-you, end to end.
+          </p>
+          <div class="hero-actions">
+            <button onclick="openBookingModal()" class="btn btn-primary">Book a Strategy Call →</button>
+            <a href="#engine" class="btn btn-ghost">Explore Our Engine</a>
+          </div>
+
+          <div class="hero-proof-bar">
+            <div class="avatars-group">
+              <div class="avatar-circle" style="background:#4F46E5;">JD</div>
+              <div class="avatar-circle" style="background:#059669;">SL</div>
+              <div class="avatar-circle" style="background:#D97706;">MK</div>
+              <div class="avatar-circle" style="background:#DC2626;">AT</div>
+            </div>
+            <div>
+              <strong style="color: #fff;">Trusted by 45+ high-growth scale-ups</strong> across US, UK &amp; Global markets.
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO INTERACTIVE STAT CARD -->
+        <div class="hero-visual-card">
+          <div class="visual-card-header">
+            <div class="visual-badge">
+              <span class="live-dot"></span> Gravionix Growth Matrix
+            </div>
+            <span style="font-size: 12px; color: rgba(255,255,255,0.5);">Real-Time Attribution</span>
+          </div>
+
+          <div class="visual-metrics-grid">
+            <div class="metric-tile">
+              <div class="tile-num">$86M<span>+</span></div>
+              <div class="tile-label">Client Revenue Scaled</div>
+            </div>
+            <div class="metric-tile">
+              <div class="tile-num">4.8<span>×</span></div>
+              <div class="tile-label">Average Blended ROAS</div>
+            </div>
+            <div class="metric-tile">
+              <div class="tile-num">340<span>%</span></div>
+              <div class="tile-label">Avg. Pipeline Velocity</div>
+            </div>
+            <div class="metric-tile">
+              <div class="tile-num">99.2<span>%</span></div>
+              <div class="tile-label">Client Retention Rate</div>
+            </div>
+          </div>
+
+          <div class="card-activity-feed">
+            <div class="activity-item">
+              <span class="activity-tag">Paid Acquisition</span>
+              <span style="color: rgba(255,255,255,0.8);">SaaS Enterprise Funnel</span>
+              <span class="activity-val">+312% Demo Rate</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-tag">Creative Engine</span>
+              <span style="color: rgba(255,255,255,0.8);">Short-Form Meta Matrix</span>
+              <span class="activity-val">5.4x ROAS</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-tag">CRO &amp; Retention</span>
+              <span style="color: rgba(255,255,255,0.8);">LTV Lifecycle Loop</span>
+              <span class="activity-val">+$1.4M ARR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST CLIENT STRIP -->
+  <section class="trust-strip">
+    <div class="wrap">
+      <div class="trust-inner">
+        <div class="trust-title">Engineered Growth For Category Leaders</div>
+        <div class="client-logos">
+          <div class="client-logo-item">✦ NEXACORE</div>
+          <div class="client-logo-item">◈ PULSEFLOW</div>
+          <div class="client-logo-item">▲ HYPERION</div>
+          <div class="client-logo-item">❖ STRATAVOX</div>
+          <div class="client-logo-item">■ ELEV8 LABS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE HELP / INTRO SECTION -->
+  <section class="sec" id="who">
+    <div class="wrap">
+      <div class="lead-row">
+        <div>
+          <div class="cue">
+            <span class="dot"></span> Helping Ambitious Brands Scale
+          </div>
+          <h2 class="section-title">
+            Your product is exceptional. We build the growth machine that scales it.
+          </h2>
+          <p class="intro">
+            You've built something customers love. But building a great offering isn't the same as capturing market dominance. Gravionix partners with fast-scaling founders, brands, and enterprises to build high-converting acquisition engines that convert attention into predictable, high-margin revenue.
+          </p>
+        </div>
+        <div class="helps">
+          <div class="help-row">
+            <span class="n">01</span>
+            <span class="t">Dominate Omni-Channel Paid Acquisition</span>
+          </div>
+          <div class="help-row">
+            <span class="n">02</span>
+            <span class="t">High-Velocity Creative &amp; Video Engine</span>
+          </div>
+          <div class="help-row">
+            <span class="n">03</span>
+            <span class="t">Predictable Full-Funnel Revenue Architecture</span>
+          </div>
+          <div class="help-row">
+            <span class="n">04</span>
+            <span class="t">Autonomous Scale Without Team Burnout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SYSTEM / TIERS -->
+  <section class="sec cream" id="system">
+    <div class="wrap">
+      <div style="margin-bottom: 56px;">
+        <div class="cue">
+          <span class="dot"></span> The Gravionix Growth System
+        </div>
+        <h2 class="section-title">
+          We meet you where you are, and build what scales next.
+        </h2>
+        <p class="intro">
+          Sustainable marketing scale is a sequence, not an ad-hoc checklist. Build the foundation right, and every ad dollar compounds. That's why we operate in three structured tiers: start where your bottleneck lies, and scale into the rest.
+        </p>
+      </div>
+
+      <div class="tiers">
+        <!-- Tier 1 -->
+        <div class="tier">
+          <div class="tier-eyebrow">Tier 1 — Foundation</div>
+          <h3 class="tier-title">Brand, CRO &amp; Funnels</h3>
+          <div class="tier-pill">One-time Sprint</div>
+          <ul class="tier-list">
+            <li>
+              <span class="diamond"></span> Brand positioning &amp; category narrative
+            </li>
+            <li>
+              <span class="diamond"></span> High-converting landing pages &amp; funnels
+            </li>
+            <li>
+              <span class="diamond"></span> Analytics, pixel &amp; server-side CAPI tracking
+            </li>
+            <li>
+              <span class="diamond"></span> Video Sales Letter (VSL) script &amp; production
+            </li>
+            <li>
+              <span class="diamond"></span> Automated email &amp; SMS welcome sequences
+            </li>
+          </ul>
+          <div class="tier-footer">
+            <button onclick="openBookingModal('Tier 1 — Brand, CRO & Funnels')" class="btn btn-ghost-dark">Select Foundation</button>
+          </div>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="tier featured">
+          <div class="featured-tag">Most Popular</div>
+          <div class="tier-eyebrow">Tier 2 — Velocity</div>
+          <h3 class="tier-title">Omnichannel Creative &amp; Reach</h3>
+          <div class="tier-pill">Monthly Growth Retainer</div>
+          <ul class="tier-list">
+            <li>
+              <span class="diamond"></span> 20+ High-performing short-form video ads / month
+            </li>
+            <li>
+              <span class="diamond"></span> Meta, TikTok &amp; YouTube creative testing matrix
+            </li>
+            <li>
+              <span class="diamond"></span> LinkedIn B2B thought leadership &amp; organic reach
+            </li>
+            <li>
+              <span class="diamond"></span> Continuous A/B split-testing &amp; CRO iterations
+            </li>
+            <li>
+              <span class="diamond"></span> Weekly executive dashboard &amp; Slack access
+            </li>
+          </ul>
+          <div class="tier-footer">
+            <button onclick="openBookingModal('Tier 2 — Omnichannel Creative & Reach')" class="btn btn-primary">Select Velocity</button>
+          </div>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="tier">
+          <div class="tier-eyebrow">Tier 3 — Hyper-Scale</div>
+          <h3 class="tier-title">Full-Funnel Acquisition &amp; Ads</h3>
+          <div class="tier-pill">Retainer + Performance</div>
+          <ul class="tier-list">
+            <li>
+              <span class="diamond"></span> Scaled paid media management ($25k–$500k/mo)
+            </li>
+            <li>
+              <span class="diamond"></span> Google Search, Performance Max &amp; YouTube Ads
+            </li>
+            <li>
+              <span class="diamond"></span> Omnichannel retargeting &amp; account-based marketing
+            </li>
+            <li>
+              <span class="diamond"></span> Fractional CMO strategic leadership
+            </li>
+            <li>
+              <span class="diamond"></span> Dedicated growth pod (Strategist, Copy, Media Buyer)
+            </li>
+          </ul>
+          <div class="tier-footer">
+            <button onclick="openBookingModal('Tier 3 — Full-Funnel Acquisition & Ads')" class="btn btn-ghost-dark">Select Hyper-Scale</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategic Launch Banner -->
+      <div class="launch-banner">
+        <div>
+          <div class="bl">
+            Launching a venture-backed startup or enterprise product? <br>
+            <span>We engineer complete category takeovers.</span>
+          </div>
+        </div>
+        <div class="br">
+          From stealth-mode reveal to global pipeline acceleration, our senior strategists deploy battle-tested go-to-market systems that command investor and market attention from day zero.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE DUAL ENGINE SECTION -->
+  <section class="sec" id="engine">
+    <div class="wrap">
+      <div style="margin-bottom: 56px;">
+        <div class="cue">
+          <span class="dot"></span> How The Work Gets Done
+        </div>
+        <h2 class="section-title">
+          Two engines. One outcome: a marketing machine that scales without you in the weeds.
+        </h2>
+      </div>
+
+      <div class="engine-grid">
+        <!-- Engine 01 - Build -->
+        <div class="eng-side">
+          <div class="en">Engine 01 — Build</div>
+          <h3>The foundation of conversion &amp; authority.</h3>
+          <div class="eng-list">
+            <div class="eng-item">
+              <div class="ic">A</div>
+              <div>
+                <div class="et">Precision Brand Narrative</div>
+                <div class="ed">Clarify your unique mechanism, customer value proposition, and market-dominating offer.</div>
+              </div>
+            </div>
+            <div class="eng-item">
+              <div class="ic">B</div>
+              <div>
+                <div class="et">High-Converting Digital Architecture</div>
+                <div class="ed">Ultra-fast web funnels, landing pages, and conversion flows designed to maximize revenue per visitor.</div>
+              </div>
+            </div>
+            <div class="eng-item">
+              <div class="ic">C</div>
+              <div>
+                <div class="et">Tracking &amp; Server-Side Intelligence</div>
+                <div class="ed">Rock-solid first-party data attribution, GA4, Meta CAPI, and custom revenue attribution models.</div>
+              </div>
+            </div>
+            <div class="eng-item">
+              <div class="ic">D</div>
+              <div>
+                <div class="et">Lifecycle &amp; Retention Loops</div>
+                <div class="ed">Automated email, SMS, and reactivation workflows that double customer lifetime value (LTV).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engine 02 - Amplify (Dark Glowing Side) -->
+        <div class="eng-side dark">
+          <div class="en">Engine 02 — Amplify</div>
+          <h3>Scale your audience &amp; flood your pipeline.</h3>
+          <div class="eng-list">
+            <div class="eng-item">
+              <div class="ic">1</div>
+              <div>
+                <div class="et">Omnichannel Paid Media Domination</div>
+                <div class="ed">Aggressive yet profitable customer acquisition across Meta, Google Search/YouTube, TikTok, and LinkedIn.</div>
+              </div>
+            </div>
+            <div class="eng-item">
+              <div class="ic">2</div>
+              <div>
+                <div class="et">High-Velocity Creative Matrix</div>
+                <div class="ed">Endless pipeline of thumb-stopping video reels, UGC hooks, motion graphics, and static creatives tested weekly.</div>
+              </div>
+            </div>
+            <div class="eng-item">
+              <div class="ic">3</div>
+              <div>
+                <div class="et">Automated Account-Based Outreach</div>
+                <div class="ed">Hyper-targeted B2B sequences that land high-value enterprise decision makers directly onto your calendar.</div>
+              </div>
+            </div>
+            <div class="eng-item">
+              <div class="ic">4</div>
+              <div>
+                <div class="et">Algorithmic Scaling &amp; Profit Optimization</div>
+                <div class="ed">Daily bid management, creative rotation, and budget allocation to consistently beat customer acquisition targets.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE RESULTS SECTION -->
+  <section class="sec cream" id="proof">
+    <div class="wrap">
+      <div style="margin-bottom: 56px;">
+        <div class="cue">
+          <span class="dot"></span> Why It Works
+        </div>
+        <h2 class="section-title">
+          The math is simple: one optimized funnel pays for Gravionix many times over.
+        </h2>
+        <p class="intro">
+          When your cost-per-acquisition drops by 38% and your conversion rate doubles, profitability explodes. A brand scaling with even one validated Gravionix growth flywheel covers the entire engagement in weeks. That's the baseline we engineer.
+        </p>
+      </div>
+
+      <div class="vgridcards">
+        <!-- Case 1 -->
+        <div class="vcard rv">
+          <div class="vcard-media">
+            <!-- SaaS Growth Graphic SVG -->
+            <svg viewBox="0 0 400 240" width="100%" height="100%" style="display:block; background: radial-gradient(circle at 70% 30%, #151d38 0%, #070914 100%);">
+              <defs>
+                <linearGradient id="chartGrad1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.0"/>
+                </linearGradient>
+                <linearGradient id="lineGrad1" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#7C3AED"/>
+                  <stop offset="50%" stop-color="#3B82F6"/>
+                  <stop offset="100%" stop-color="#06B6D4"/>
+                </linearGradient>
+              </defs>
+              <g opacity="0.15">
+                <line x1="40" y1="40" x2="360" y2="40" stroke="#fff" stroke-dasharray="4"/>
+                <line x1="40" y1="90" x2="360" y2="90" stroke="#fff" stroke-dasharray="4"/>
+                <line x1="40" y1="140" x2="360" y2="140" stroke="#fff" stroke-dasharray="4"/>
+                <line x1="40" y1="190" x2="360" y2="190" stroke="#fff"/>
+              </g>
+              <path d="M 40 180 Q 120 170 180 130 T 290 80 T 360 45 L 360 190 L 40 190 Z" fill="url(#chartGrad1)"/>
+              <path d="M 40 180 Q 120 170 180 130 T 290 80 T 360 45" fill="none" stroke="url(#lineGrad1)" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="360" cy="45" r="5" fill="#06B6D4"/>
+              <circle cx="360" cy="45" r="9" fill="none" stroke="#06B6D4" opacity="0.5"/>
+              <text x="50" y="30" fill="#94A3B8" font-family="'Sora', sans-serif" font-size="11" font-weight="600">ENTERPRISE ARR TRAJECTORY</text>
+              <rect x="230" y="24" width="130" height="26" rx="4" fill="#0F172A" stroke="rgba(255,255,255,0.1)"/>
+              <text x="240" y="41" fill="#38BDF8" font-family="'Sora', sans-serif" font-size="11" font-weight="700">+$4.2M Net ARR</text>
+            </svg>
+            <div class="vcard-badge">$4.2M Scale</div>
+            <div class="vcard-play" onclick="openVideoModal('Elena Vance', 'Scale-up SaaS', 'Scaled ARR from $1.1M to $5.3M in 10 months via full-funnel Meta & Google search architecture.')">
+              <div class="play-circle">
+                <svg viewBox="0 0 24 24"><path d="M8 5.14v13.72l11-6.86L8 5.14z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="vcap">
+            <div class="who">Elena Vance</div>
+            <div class="role">VP Growth — CloudSync Enterprise</div>
+            <div class="stars">★★★★★</div>
+            <div class="vq">
+              "Gravionix completely transformed our unit economics. We cut our CAC by 42% while 4x-ing our qualified enterprise demo volume in under 90 days."
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="vcard rv">
+          <div class="vcard-media">
+            <!-- D2C Video Creative Matrix Graphic SVG -->
+            <svg viewBox="0 0 400 240" width="100%" height="100%" style="display:block; background: radial-gradient(circle at 40% 70%, #171026 0%, #070914 100%);">
+              <defs>
+                <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#06B6D4"/>
+                  <stop offset="100%" stop-color="#7C3AED"/>
+                </linearGradient>
+              </defs>
+              <rect x="60" y="110" width="36" height="80" rx="4" fill="#1E293B"/>
+              <rect x="120" y="85" width="36" height="105" rx="4" fill="#1E293B"/>
+              <rect x="180" y="65" width="36" height="125" rx="4" fill="#334155"/>
+              <rect x="240" y="45" width="36" height="145" rx="4" fill="#475569"/>
+              <rect x="300" y="25" width="36" height="165" rx="4" fill="url(#barGrad)"/>
+              <text x="305" y="18" fill="#22D3EE" font-family="'Sora', sans-serif" font-size="11" font-weight="700">7.4×</text>
+              <text x="50" y="30" fill="#94A3B8" font-family="'Sora', sans-serif" font-size="11" font-weight="600">BLENDED ROAS PERFORMANCE</text>
+              <line x1="40" y1="190" x2="360" y2="190" stroke="rgba(255,255,255,0.1)"/>
+            </svg>
+            <div class="vcard-badge">7.4× Blended ROAS</div>
+            <div class="vcard-play" onclick="openVideoModal('Marcus Sterling', 'D2C Health & Wellness', 'Generated $2.8M in net new sales across Q3/Q4 with high-velocity creative testing.')">
+              <div class="play-circle">
+                <svg viewBox="0 0 24 24"><path d="M8 5.14v13.72l11-6.86L8 5.14z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="vcap">
+            <div class="who">Marcus Sterling</div>
+            <div class="role">Founder &amp; CEO — Aurafy Nutrition</div>
+            <div class="stars">★★★★★</div>
+            <div class="vq">
+              "Their short-form creative engine is second to none. The video ads they test and deploy outperform anything our previous three agencies produced."
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="vcard rv">
+          <div class="vcard-media">
+            <!-- B2B Account Pipeline Graphic SVG -->
+            <svg viewBox="0 0 400 240" width="100%" height="100%" style="display:block; background: radial-gradient(circle at 50% 50%, #0d1e38 0%, #070914 100%);">
+              <circle cx="200" cy="115" r="65" fill="none" stroke="rgba(6,182,212,0.2)" stroke-width="12"/>
+              <circle cx="200" cy="115" r="65" fill="none" stroke="#06B6D4" stroke-width="12" stroke-dasharray="320" stroke-dashoffset="65" stroke-linecap="round"/>
+              <text x="200" y="112" fill="#fff" font-family="'Sora', sans-serif" font-size="22" font-weight="800" text-anchor="middle">180+</text>
+              <text x="200" y="130" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="600" text-anchor="middle">CLOSED DEALS</text>
+              <text x="50" y="30" fill="#94A3B8" font-family="'Sora', sans-serif" font-size="11" font-weight="600">B2B PIPELINE ACQUISITION</text>
+            </svg>
+            <div class="vcard-badge">180+ Enterprise Deals</div>
+            <div class="vcard-play" onclick="openVideoModal('David H. Ross', 'FinTech Solutions', 'Closed $1.9M in contract value via precision LinkedIn and automated ABM pipeline.')">
+              <div class="play-circle">
+                <svg viewBox="0 0 24 24"><path d="M8 5.14v13.72l11-6.86L8 5.14z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="vcap">
+            <div class="who">David H. Ross</div>
+            <div class="role">Chief Commercial Officer — FinMatrix</div>
+            <div class="stars">★★★★★</div>
+            <div class="vq">
+              "Hands down the highest ROI partnership we've ever signed. Gravionix operates as an elite extension of our executive leadership team."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE ROI SIMULATOR -->
+      <div class="calc-wrapper" id="calculator">
+        <div class="calc-controls">
+          <div class="cue light" style="margin-bottom: 8px;">
+            <span class="cue-dot">●</span> Interactive Revenue Simulator
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 26px; font-weight: 800; line-height: 1.2;">
+            Calculate your pipeline expansion with Gravionix.
+          </h3>
+          <p style="font-size: 14.5px; color: rgba(255,255,255,0.7);">
+            Adjust your current monthly revenue and target growth rate to view projected net revenue expansion and pipeline ROI.
+          </p>
+
+          <div class="calc-slider-group">
+            <label>Current Monthly Revenue: <span class="val" id="revVal">$50,000 / mo</span></label>
+            <input type="range" id="revInput" min="10000" max="500000" step="5000" value="50000" oninput="calculateROI()">
+          </div>
+
+          <div class="calc-slider-group">
+            <label>Target 6-Month Pipeline Lift: <span class="val" id="liftVal">3.2× Growth</span></label>
+            <input type="range" id="liftInput" min="1.5" max="6.0" step="0.1" value="3.2" oninput="calculateROI()">
+          </div>
+        </div>
+
+        <div class="calc-results-card">
+          <div class="calc-stat-row">
+            <span class="lbl">Projected Monthly Revenue</span>
+            <span class="val highlight" id="projectedRev">$160,000</span>
+          </div>
+          <div class="calc-stat-row">
+            <span class="lbl">Net Annual Pipeline Value</span>
+            <span class="val" id="annualPipeline">$1.92M</span>
+          </div>
+          <div class="calc-stat-row">
+            <span class="lbl">Estimated Payback Period</span>
+            <span class="val" id="paybackPeriod">Under 18 Days</span>
+          </div>
+          <button onclick="openBookingModal('ROI Simulator Inquirer')" class="btn btn-primary" style="margin-top: 8px; width: 100%;">
+            Unlock This Growth Roadmap →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION SECTION ("IMAGINE A WORLD WHERE...") -->
+  <section class="vision">
+    <div class="wrap">
+      <div style="margin-bottom: 48px;">
+        <div class="cue light">
+          <span class="dot"></span> Imagine A World Where…
+        </div>
+        <h2 style="font-family: var(--font-heading); font-size: clamp(30px, 4vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; max-width: 24ch; margin-bottom: 22px; color: #fff;">
+          We understand where your brand stands, where you want to go, and how to get you there.
+        </h2>
+      </div>
+
+      <div class="vgrid">
+        <div class="vitem">
+          <span class="chk">◆</span>
+          <span class="text">You possess a validated, scalable customer acquisition engine delivering predictable ARR week after week.</span>
+        </div>
+        <div class="vitem">
+          <span class="chk">◆</span>
+          <span class="text">You reclaim 20+ hours a week because your high-converting creative and paid media flywheels run autonomously.</span>
+        </div>
+        <div class="vitem">
+          <span class="chk">◆</span>
+          <span class="text">Your digital web ecosystem operates as a conversion weapon, turning cold traffic into paying advocates.</span>
+        </div>
+        <div class="vitem">
+          <span class="chk">◆</span>
+          <span class="text">Your calendar stays packed with qualified enterprise prospects ready to sign without lengthy negotiation.</span>
+        </div>
+        <div class="vitem">
+          <span class="chk">◆</span>
+          <span class="text">Your ad creatives capture category attention and outperform every legacy competitor in your space.</span>
+        </div>
+        <div class="vitem">
+          <span class="chk">◆</span>
+          <span class="text">You become the uncontested, go-to category leader in your target market.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION SECTION -->
+  <section class="sec cream" id="faq">
+    <div class="wrap">
+      <div style="margin-bottom: 48px;">
+        <div class="cue">
+          <span class="dot"></span> Clarity &amp; Transparency
+        </div>
+        <h2 class="section-title">
+          Frequently asked questions.
+        </h2>
+        <p class="intro">
+          Everything you need to know about partnering with Gravionix, our operational cadences, and our performance standards.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How fast do we typically see measurable pipeline traction?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>From day one of our agreement, onboarding and tracking architecture are fully deployed within 7 business days. Your first high-velocity creative testing matrix launches in week 2, and initial benchmark efficiency and qualified inbound flow compound across weeks 3 and 4.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What makes Gravionix fundamentally different from standard agencies?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Generalist agencies isolate tasks—one vendor does ads, another writes copy, while your internal team tries to piece together attribution. Gravionix builds the entire conversion engine end to end: positioning, high-velocity creative matrix, server-side tracking, and multi-channel acquisition managed by a dedicated growth pod.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you produce all video ad creatives and design assets in-house?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Our in-house creative lab handles scriptwriting, UGC curation, high-production editing, motion graphics, and iterative angle testing. You never have to worry about creative fatigue or scrambling for ad assets.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What is the contract structure and engagement commitment?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We work in an initial 90-day growth sprint to engineer, validate, and scale your unit economics. After the initial sprint, agreements convert to flexible month-to-month retainers. We don't believe in locking clients into 12-month handcuffs—our retention is earned through performance.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How many new clients does Gravionix take on?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We deliberately cap our client intake to a maximum of 3 new partners per quarter. This ensures our senior directors and growth leads remain deeply embedded in your business rather than handing you off to junior interns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRATEGY CONSULTATION & CONTACT SECTION -->
+  <section class="cta-sec" id="contact">
+    <div class="wrap">
+      <div class="cta-card">
+        <div class="cta-glow-bg"></div>
+        <div class="cta-grid">
+          <div>
+            <div class="cue light">
+              <span class="dot"></span> Book A Growth Session
+            </div>
+            <h2 style="font-family: var(--font-heading); font-size: clamp(32px, 4vw, 46px); font-weight: 800; line-height: 1.1; margin-bottom: 18px; color: #fff;">
+              Let's build your growth engine.
+            </h2>
+            <p style="font-size: 17px; color: rgba(255,255,255,0.78); line-height: 1.6; margin-bottom: 24px;">
+              Schedule a private 30-minute growth roadmap session. We'll audit your current acquisition funnel, pinpoint hidden drop-offs, and map the exact trajectory to 3x your pipeline.
+            </p>
+
+            <div class="cta-benefits">
+              <div class="benefit-row">
+                <span class="chk">◆</span>
+                <span>A comprehensive, tailored growth roadmap for your industry</span>
+              </div>
+              <div class="benefit-row">
+                <span class="chk">◆</span>
+                <span>Direct analysis from senior strategists (zero pushy sales reps)</span>
+              </div>
+              <div class="benefit-row">
+                <span class="chk">◆</span>
+                <span>Unfiltered breakdown of what will actually move your top-line revenue</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Form -->
+          <form class="cta-form" id="growthForm" onsubmit="handleFormSubmit(event)">
+            <label for="name">Your Full Name</label>
+            <input id="name" type="text" placeholder="Sarah Connor" required>
+
+            <label for="email">Work Email</label>
+            <input id="email" type="email" placeholder="sarah@company.com" required>
+
+            <label for="company">Company &amp; Website</label>
+            <input id="company" type="text" placeholder="Acme Inc. — acme.com" required>
+
+            <label for="service">Select What You Need Most</label>
+            <select id="service" required>
+              <option value="" disabled selected>Select starting focus…</option>
+              <option value="Tier 1 — Brand, CRO & Funnels">Tier 1 — Brand, CRO &amp; Funnel Sprint</option>
+              <option value="Tier 2 — Omnichannel Creative & Reach">Tier 2 — Omnichannel Creative Engine</option>
+              <option value="Tier 3 — Hyper-Scale Acquisition">Tier 3 — Full-Funnel Paid Acquisition &amp; Ads</option>
+              <option value="Category Launch & GTM">Enterprise Category Launch / GTM</option>
+              <option value="Comprehensive Growth Audit">Full Growth Architecture Audit</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+              Claim My Free Strategy Roadmap →
+            </button>
+            <div class="form-note">
+              Strictly confidential. We review your site and respond within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <!-- Brand Column -->
+        <div class="foot-brand">
+          <a href="#top" class="logo">
+            Gravi<span class="x">onix</span>
+            <span class="logo-dot"></span>
+          </a>
+          <p>
+            The specialist growth marketing partner for category-defining brands, scale-ups, and enterprise innovators. We build the architecture, scale the visibility, and win market dominance.
+          </p>
+
+          <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="mailto:growth@gravionix.com" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Company Column -->
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="#who">Who We Help</a>
+          <a href="#system">The System</a>
+          <a href="#engine">The Dual Engine</a>
+          <a href="#proof">Case Results</a>
+          <a href="#calculator">ROI Simulator</a>
+        </div>
+
+        <!-- Services Column -->
+        <div class="foot-col">
+          <h4>Capabilities</h4>
+          <a href="#engine">Omnichannel Paid Media</a>
+          <a href="#engine">Performance Creative Matrix</a>
+          <a href="#engine">Funnel &amp; CRO Architecture</a>
+          <a href="#engine">B2B Account Acquisition</a>
+          <a href="#system">Fractional CMO Leadership</a>
+        </div>
+
+        <!-- Get In Touch Column -->
+        <div class="foot-col">
+          <h4>Get In Touch</h4>
+          <a href="mailto:growth@gravionix.com">growth@gravionix.com</a>
+          <a href="tel:+18005550199">+1 (800) 555-0199</a>
+          <a href="#contact" onclick="openBookingModal()">Book a Strategy Call</a>
+          <span style="font-size: 13px; color: rgba(255,255,255,0.45); display:block; margin-top: 8px;">
+            New York · London · Remote Worldwide
+          </span>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="foot-bot">
+        <span>© 2026 Gravionix Global Inc. All rights reserved.</span>
+        <span>Built for high-velocity category leaders worldwide.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STRATEGY CALL BOOKING MODAL -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+      <div class="cue light" style="margin-bottom: 8px;">
+        <span class="dot"></span> Schedule Strategy Session
+      </div>
+      <h3 style="font-family: var(--font-heading); font-size: 26px; font-weight: 800; margin-bottom: 12px;">
+        Let's Map Your Scale Trajectory
+      </h3>
+      <p style="font-size: 14.5px; color: rgba(255,255,255,0.7); margin-bottom: 22px;">
+        Pick your current monthly revenue range and focus tier to book your 1-on-1 strategy session with our senior growth directors.
+      </p>
+
+      <form id="modalBookingForm" onsubmit="handleModalSubmit(event)" style="display:flex; flex-direction:column; gap: 14px;">
+        <input type="text" id="mName" placeholder="Your Name" required class="modal-input" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:12px 16px; border-radius:6px; color:#fff;">
+        <input type="email" id="mEmail" placeholder="Work Email" required class="modal-input" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:12px 16px; border-radius:6px; color:#fff;">
+        <select id="mBudget" required style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:12px 16px; border-radius:6px; color:#fff;">
+          <option value="" disabled selected>Monthly Ad / Growth Budget…</option>
+          <option value="5k-15k">$5,000 – $15,000 / month</option>
+          <option value="15k-50k">$15,000 – $50,000 / month</option>
+          <option value="50k-150k">$50,000 – $150,000 / month</option>
+          <option value="150k+">$150,000+ / month (Enterprise)</option>
+        </select>
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Confirm &amp; Pick Calendar Slot →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- VIDEO / CASE PREVIEW MODAL -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-container" style="max-width: 640px;">
+      <button class="modal-close" onclick="closeVideoModal()">&times;</button>
+      <div class="cue light" style="margin-bottom: 6px;">
+        <span class="dot"></span> Client Growth Case Study
+      </div>
+      <h3 id="videoModalTitle" style="font-family: var(--font-heading); font-size: 24px; font-weight: 800; margin-bottom: 6px;">Case Details</h3>
+      <p id="videoModalRole" style="font-size: 13.5px; color: var(--accent-cyan-bright); margin-bottom: 18px;"></p>
+      
+      <div style="background: #080A18; border-radius: 8px; padding: 24px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;">
+        <p id="videoModalBody" style="font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.6;"></p>
+        <div style="display:flex; gap: 14px; margin-top: 16px; align-items:center;">
+          <span style="background:rgba(124, 58, 237, 0.2); color:#C084FC; padding:4px 10px; border-radius:4px; font-size:12px; font-weight:700;">Verified Metric</span>
+          <span style="color:#10B981; font-size:13px; font-weight:600;">✓ Authenticated Customer Review</span>
+        </div>
+      </div>
+
+      <button onclick="closeVideoModal(); openBookingModal();" class="btn btn-primary" style="width: 100%;">
+        Request Similar Case Blueprint →
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-msg" id="toastMsg">✓ Strategy session request received!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

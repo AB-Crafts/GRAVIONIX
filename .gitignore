@@ -1,0 +1,10 @@
+# Node & Dependencies
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE & Editor
+.vscode/
+.idea/
+.antigravity/
