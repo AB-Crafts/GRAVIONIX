@@ -1,45 +1,43 @@
 :root {
-  /* ── Light Theme Palette ── */
+  /* ── Fully Pure Light Theme Palette ── */
   --bg-page: #FFFFFF;
-  --bg-subtle: #F8FAFC;
-  --cream: #F8FAFC;
-  --cream2: #F1F5F9;
+  --bg-subtle: #F9FAFB;
+  --cream: #F9FAFB;
+  --cream2: #F3F4F6;
   --white: #FFFFFF;
 
-  /* ── Deep High-Contrast Typography ── */
-  --navy: #0A1A2F;               /* Midnight Dark Navy for Headings */
-  --navy2: #0D213B;
-  --navy3: #122A4A;
+  /* ── Deep, High-Contrast Crisp Typography ── */
+  --navy: #0F172A;               /* Dark Slate/Navy for Headings */
+  --navy2: #1E293B;
+  --navy3: #334155;
   --slate-dark: #0F172A;
-  --slate: #475569;              /* Refined Body Slate */
-  --slate-light: #64748B;
+  --slate: #4B5563;              /* Refined Body Gray */
+  --slate-light: #6B7280;
   
-  /* ── Line & Border Tones ── */
-  --line: #E2E8F0;
-  --line-light: #F1F5F9;
-  --line-dark: rgba(0, 0, 0, 0.08);
+  /* ── Clean Light Borders ── */
+  --line: #E5E7EB;
+  --line-light: #F3F4F6;
+  --line-dark: rgba(0, 0, 0, 0.06);
 
-  /* ── Signature Red & Coral Accents ── */
+  /* ── Signature Vibrant Red & Coral Accents ── */
   --accent: #f11616;              /* Primary Red */
-  --accent-light: #FF5A5F;        /* Coral Eyebrow */
+  --accent-light: #FF5A5F;        /* Coral Red */
   --accent-dim: #b50e20;
   --accent-soft: rgba(241, 22, 22, 0.08);
   
-  /* ── Gradients & Glows ── */
+  /* ── Light Gradients & Soft Glows ── */
   --grad-primary: linear-gradient(135deg, #f11616 0%, #FF5A5F 100%);
-  --grad-hero: radial-gradient(circle at 85% 15%, rgba(241, 22, 22, 0.08) 0%, transparent 45%),
-               linear-gradient(160deg, #FFFFFF 0%, #F8FAFC 55%, #EDF2F7 100%);
-  --grad-card: radial-gradient(90% 120% at 100% 0%, rgba(241, 22, 22, 0.05) 0%, transparent 45%),
-               linear-gradient(160deg, #FFFFFF 0%, #F8FAFC 100%);
+  --grad-hero: radial-gradient(circle at 85% 15%, rgba(241, 22, 22, 0.05) 0%, transparent 45%), #FFFFFF;
+  --grad-card: #FFFFFF;
 
   /* ── Typography & Shadows ── */
   --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 8px 24px rgba(241, 22, 22, 0.25);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 30px -4px rgba(0, 0, 0, 0.07);
+  --shadow-glow: 0 4px 16px rgba(241, 22, 22, 0.28);
   
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -63,7 +61,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--slate);
-  background: var(--bg-page);
+  background: #FFFFFF;
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -86,12 +84,13 @@ button, input, select, textarea {
 }
 
 .sec {
-  padding: 110px 0;
+  padding: 100px 0;
   position: relative;
+  background: #FFFFFF;
 }
 
 .sec.cream {
-  background: var(--cream);
+  background: var(--bg-subtle);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -110,15 +109,11 @@ button, input, select, textarea {
   margin-bottom: 18px;
 }
 
-.cue.light {
-  color: var(--accent);
-}
-
 .cue .dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: currentColor;
+  background: var(--accent);
   box-shadow: 0 0 8px rgba(241, 22, 22, 0.4);
 }
 
@@ -129,7 +124,7 @@ button, input, select, textarea {
   line-height: 1.1;
   letter-spacing: -0.025em;
   color: var(--navy);
-  margin: 0 0 22px 0;
+  margin: 0 0 20px 0;
 }
 
 .intro {
@@ -140,28 +135,22 @@ button, input, select, textarea {
   line-height: 1.65;
 }
 
-/* ── Gradient Text & Underlines ── */
+/* ── Gradient / Highlight Text ── */
 .gradient-text {
-  background: linear-gradient(180deg, transparent 75%, rgba(241, 22, 22, 0.2) 75%);
-  padding: 0 4px;
-  color: var(--navy);
+  color: var(--accent);
+  background: rgba(241, 22, 22, 0.08);
+  padding: 2px 10px;
+  border-radius: 4px;
 }
 
-.highlight-underline {
-  position: relative;
-  display: inline;
-  background: linear-gradient(180deg, transparent 75%, rgba(241, 22, 22, 0.25) 75%);
-  padding: 0 4px;
-}
-
-/* ── Fixed Header ── */
+/* ── Fixed Header (Pure White Light Mode) ── */
 #hdr {
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
@@ -169,8 +158,8 @@ button, input, select, textarea {
 }
 
 #hdr.scrolled {
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: #FFFFFF;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
@@ -252,7 +241,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 15px;
-  padding: 14px 28px;
+  padding: 13px 28px;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.25s ease;
@@ -266,13 +255,11 @@ button, input, select, textarea {
   background-image: var(--grad-primary);
   color: #FFFFFF !important;
   box-shadow: var(--shadow-glow);
-  position: relative;
-  overflow: hidden;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(241, 22, 22, 0.35);
+  box-shadow: 0 6px 20px rgba(241, 22, 22, 0.35);
 }
 
 .btn-ghost {
@@ -299,7 +286,7 @@ button, input, select, textarea {
 }
 
 .nav-cta {
-  padding: 11px 22px;
+  padding: 10px 22px;
   font-size: 13.5px;
   border-radius: var(--radius-sm);
 }
@@ -342,8 +329,7 @@ button, input, select, textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
+  background: #FFFFFF;
   padding: 40px 28px;
   flex-direction: column;
   gap: 24px;
@@ -363,41 +349,27 @@ button, input, select, textarea {
   padding-bottom: 14px;
 }
 
-/* ── HERO SECTION (Light Theme) ── */
+/* ── HERO SECTION (Pure Light Mode) ── */
 #hero {
-  background: var(--grad-hero);
+  background: radial-gradient(circle at 85% 15%, rgba(241, 22, 22, 0.05) 0%, transparent 45%), #FFFFFF;
   color: var(--navy);
-  padding: 140px 0 110px;
+  padding: 130px 0 100px;
   overflow: hidden;
   position: relative;
-  min-height: 80vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--line);
 }
 
-/* Subtle Grid Texture */
-#hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
-  background-size: 54px 54px;
-  pointer-events: none;
-}
-
-/* Glowing Orbital Halo */
 .hero-halo {
   position: absolute;
   top: -120px;
   right: -80px;
   width: 580px;
   height: 580px;
-  background: radial-gradient(circle, rgba(241, 22, 22, 0.1) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(241, 22, 22, 0.07) 0%, transparent 65%);
   border-radius: 50%;
-  filter: blur(60px);
   pointer-events: none;
 }
 
@@ -423,7 +395,7 @@ button, input, select, textarea {
 .hero-headline {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: clamp(42px, 5.6vw, 76px);
+  font-size: clamp(40px, 5.4vw, 72px);
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: var(--navy);
@@ -446,10 +418,10 @@ button, input, select, textarea {
   align-items: center;
 }
 
-/* ── SECTION: WHO WE ARE / INTRO ── */
+/* ── SECTION: WHO WE ARE ── */
 #about {
   background: #FFFFFF;
-  padding: 110px 0;
+  padding: 100px 0;
 }
 
 .lead-row {
@@ -497,7 +469,7 @@ button, input, select, textarea {
   letter-spacing: -0.01em;
 }
 
-/* ── SECTION: THE DUAL ENGINE (Light Mode) ── */
+/* ── SECTION: THE DUAL ENGINE (All Light Mode) ── */
 .engine-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -511,6 +483,11 @@ button, input, select, textarea {
 .eng-side {
   padding: 56px 48px;
   background: #FFFFFF;
+}
+
+.eng-side.eng-amplify {
+  background: #F9FAFB;
+  border-left: 1.5px solid var(--line);
 }
 
 .eng-side .en {
@@ -577,39 +554,10 @@ button, input, select, textarea {
   line-height: 1.55;
 }
 
-/* Engine 02 - Amplify (Sleek light contrast) */
-.eng-side.dark {
-  background: #FAFAFC;
-  color: var(--navy);
-  border-left: 1.5px solid var(--line);
-}
-
-.eng-side.dark .en {
-  color: var(--accent);
-}
-
-.eng-side.dark h3 {
-  color: var(--navy);
-}
-
-.eng-side.dark .eng-item .ic {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: rgba(241, 22, 22, 0.06);
-}
-
-.eng-side.dark .eng-item .et {
-  color: var(--navy);
-}
-
-.eng-side.dark .eng-item .ed {
-  color: var(--slate);
-}
-
-/* ── SECTION: THE TIERS ── */
+/* ── SECTION: THE TIERS (Pure Light Mode) ── */
 #system {
   background: #FFFFFF;
-  padding: 110px 0;
+  padding: 100px 0;
 }
 
 .tiers {
@@ -619,7 +567,7 @@ button, input, select, textarea {
 }
 
 .tier {
-  background: var(--bg-subtle);
+  background: #FFFFFF;
   border: 1.5px solid var(--line);
   border-radius: var(--radius-md);
   padding: 38px 32px;
@@ -627,6 +575,7 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .tier:hover {
@@ -638,7 +587,7 @@ button, input, select, textarea {
 .tier.featured {
   background: #FFFFFF;
   border: 2px solid var(--accent);
-  box-shadow: 0 16px 40px -10px rgba(241, 22, 22, 0.12);
+  box-shadow: 0 12px 30px -8px rgba(241, 22, 22, 0.15);
 }
 
 .tier.featured::before {
@@ -690,7 +639,7 @@ button, input, select, textarea {
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.05em;
-  background: #FFFFFF;
+  background: var(--bg-subtle);
   border: 1px solid var(--line);
   color: var(--navy);
   padding: 5px 14px;
@@ -744,10 +693,10 @@ button, input, select, textarea {
   width: 100%;
 }
 
-/* ── SECTION: CONTACT (Light Mode) ── */
+/* ── SECTION: CONTACT (Pure Light Mode) ── */
 .cta-sec {
-  padding: 110px 0;
-  background: var(--cream);
+  padding: 100px 0;
+  background: var(--bg-subtle);
   border-top: 1px solid var(--line);
 }
 
@@ -759,7 +708,7 @@ button, input, select, textarea {
   position: relative;
   overflow: hidden;
   border: 1.5px solid var(--line);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .cta-glow-bg {
@@ -768,7 +717,7 @@ button, input, select, textarea {
   right: -40px;
   width: 480px;
   height: 520px;
-  background: radial-gradient(circle, rgba(241, 22, 22, 0.08) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(241, 22, 22, 0.05) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -782,7 +731,7 @@ button, input, select, textarea {
 }
 
 .direct-email-box {
-  background: var(--bg-subtle);
+  background: #FFFFFF;
   border: 1.5px solid var(--line);
   border-radius: var(--radius-md);
   padding: 20px 24px;
@@ -790,6 +739,7 @@ button, input, select, textarea {
   flex-direction: column;
   gap: 6px;
   margin-top: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .email-label {
@@ -820,10 +770,11 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: var(--bg-subtle);
+  background: #FFFFFF;
   border: 1.5px solid var(--line);
   border-radius: var(--radius-md);
   padding: 34px;
+  box-shadow: var(--shadow-sm);
 }
 
 .cta-form label {
@@ -838,7 +789,7 @@ button, input, select, textarea {
 
 .cta-form input, .cta-form textarea {
   background: #FFFFFF;
-  border: 1.5px solid var(--line);
+  border: 1.5px solid #D1D5DB;
   border-radius: var(--radius-sm);
   padding: 13px 16px;
   color: var(--navy);
@@ -858,7 +809,7 @@ button, input, select, textarea {
   text-align: center;
 }
 
-/* ── FOOTER (Light Mode) ── */
+/* ── FOOTER (Pure White Light Mode) ── */
 footer {
   background: #FFFFFF;
   color: var(--slate);
@@ -893,7 +844,7 @@ footer {
   padding: 14px 24px;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   z-index: 3000;
   display: none;
   animation: slideToast 0.3s ease;
@@ -929,7 +880,7 @@ footer {
   .engine-grid {
     grid-template-columns: 1fr;
   }
-  .eng-side.dark {
+  .eng-side.eng-amplify {
     border-left: none;
     border-top: 1.5px solid var(--line);
   }
