@@ -137,10 +137,10 @@ button, input, select, textarea {
 
 /* ── Gradient / Highlight Text ── */
 .gradient-text {
-  color: var(--accent);
-  background: rgba(241, 22, 22, 0.08);
-  padding: 2px 10px;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #f11616 0%, #FF5A5F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 /* ── Fixed Header (Pure White Light Mode) ── */
@@ -269,20 +269,10 @@ button, input, select, textarea {
 }
 
 .btn-ghost:hover {
-  border-color: var(--navy);
-  background: var(--bg-subtle);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(241, 22, 22, 0.04);
   transform: translateY(-2px);
-}
-
-.btn-ghost-dark {
-  background: #FFFFFF;
-  color: var(--navy);
-  border: 1.5px solid var(--line);
-}
-
-.btn-ghost-dark:hover {
-  border-color: var(--navy);
-  background: var(--bg-subtle);
 }
 
 .nav-cta {
@@ -839,12 +829,13 @@ footer {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background: var(--navy);
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: var(--navy);
+  border: 1.5px solid var(--line);
   padding: 14px 24px;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   z-index: 3000;
   display: none;
   animation: slideToast 0.3s ease;
