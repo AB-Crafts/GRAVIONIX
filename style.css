@@ -529,6 +529,63 @@ button, input, select, textarea {
   align-items: center;
 }
 
+.hero-simple-content {
+  max-width: 860px;
+  position: relative;
+  z-index: 2;
+}
+
+.direct-email-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.email-label {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-cyan-bright);
+  font-weight: 700;
+}
+
+.email-link {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+
+.email-link:hover {
+  color: var(--accent-cyan-bright);
+}
+
+.foot-simple {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-bot-simple {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+
 .hero-text-content {
   max-width: 720px;
 }
